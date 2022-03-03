@@ -32,21 +32,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sehtestfenster));
             this.lbSehtest = new System.Windows.Forms.Label();
             this.imagelistFarben = new System.Windows.Forms.ImageList(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btZeigeBild = new System.Windows.Forms.Button();
+            this.btErgebnis = new System.Windows.Forms.Button();
+            this.lbUebersSeh = new System.Windows.Forms.Label();
             this.tbeingabe = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.lbDE = new System.Windows.Forms.Label();
+            this.btZZSt = new System.Windows.Forms.Button();
+            this.lbTimer3 = new System.Windows.Forms.Label();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.cbErscheinungsbild = new System.Windows.Forms.ComboBox();
+            this.lbEr = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbSehtest
             // 
             this.lbSehtest.ImageIndex = 0;
             this.lbSehtest.ImageList = this.imagelistFarben;
-            this.lbSehtest.Location = new System.Drawing.Point(257, 79);
+            this.lbSehtest.Location = new System.Drawing.Point(343, 97);
+            this.lbSehtest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSehtest.Name = "lbSehtest";
-            this.lbSehtest.Size = new System.Drawing.Size(260, 233);
+            this.lbSehtest.Size = new System.Drawing.Size(347, 287);
             this.lbSehtest.TabIndex = 0;
             this.lbSehtest.Text = ".";
             // 
@@ -58,76 +63,123 @@
             this.imagelistFarben.Images.SetKeyName(1, "2index.jpg");
             this.imagelistFarben.Images.SetKeyName(2, "3ishihara_farbtafel_11.png");
             // 
-            // button1
+            // btZeigeBild
             // 
-            this.button1.Location = new System.Drawing.Point(19, 79);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 100);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Zeige Bild";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btZeigeBild.Location = new System.Drawing.Point(25, 97);
+            this.btZeigeBild.Margin = new System.Windows.Forms.Padding(4);
+            this.btZeigeBild.Name = "btZeigeBild";
+            this.btZeigeBild.Size = new System.Drawing.Size(285, 123);
+            this.btZeigeBild.TabIndex = 1;
+            this.btZeigeBild.Text = "Zeige Bild";
+            this.btZeigeBild.UseVisualStyleBackColor = true;
+            this.btZeigeBild.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // button2
+            // btErgebnis
             // 
-            this.button2.Location = new System.Drawing.Point(19, 211);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(214, 101);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Ergebnis";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.btErgebnis.Location = new System.Drawing.Point(25, 260);
+            this.btErgebnis.Margin = new System.Windows.Forms.Padding(4);
+            this.btErgebnis.Name = "btErgebnis";
+            this.btErgebnis.Size = new System.Drawing.Size(285, 124);
+            this.btErgebnis.TabIndex = 2;
+            this.btErgebnis.Text = "Ergebnis";
+            this.btErgebnis.UseVisualStyleBackColor = true;
+            this.btErgebnis.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // label1
+            // lbUebersSeh
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(436, 42);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Willkommen zum Sehtest";
+            this.lbUebersSeh.AutoSize = true;
+            this.lbUebersSeh.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUebersSeh.Location = new System.Drawing.Point(110, 39);
+            this.lbUebersSeh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbUebersSeh.Name = "lbUebersSeh";
+            this.lbUebersSeh.Size = new System.Drawing.Size(549, 54);
+            this.lbUebersSeh.TabIndex = 4;
+            this.lbUebersSeh.Text = "Willkommen zum Sehtest";
             // 
             // tbeingabe
             // 
-            this.tbeingabe.Location = new System.Drawing.Point(133, 185);
+            this.tbeingabe.Location = new System.Drawing.Point(177, 228);
+            this.tbeingabe.Margin = new System.Windows.Forms.Padding(4);
             this.tbeingabe.Name = "tbeingabe";
-            this.tbeingabe.Size = new System.Drawing.Size(100, 20);
+            this.tbeingabe.Size = new System.Drawing.Size(132, 22);
             this.tbeingabe.TabIndex = 5;
             // 
-            // label3
+            // lbDE
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 188);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Dein Ergebnis";
+            this.lbDE.AutoSize = true;
+            this.lbDE.Location = new System.Drawing.Point(21, 231);
+            this.lbDE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbDE.Name = "lbDE";
+            this.lbDE.Size = new System.Drawing.Size(97, 17);
+            this.lbDE.TabIndex = 6;
+            this.lbDE.Text = "Dein Ergebnis";
             // 
-            // button3
+            // btZZSt
             // 
-            this.button3.Location = new System.Drawing.Point(469, 395);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 43);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Zurück zur Startseite";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            this.btZZSt.Location = new System.Drawing.Point(625, 486);
+            this.btZZSt.Margin = new System.Windows.Forms.Padding(4);
+            this.btZZSt.Name = "btZZSt";
+            this.btZZSt.Size = new System.Drawing.Size(143, 53);
+            this.btZZSt.TabIndex = 7;
+            this.btZZSt.Text = "Zurück zur Startseite";
+            this.btZZSt.UseVisualStyleBackColor = true;
+            this.btZZSt.Click += new System.EventHandler(this.Button3_Click);
+            // 
+            // lbTimer3
+            // 
+            this.lbTimer3.AutoSize = true;
+            this.lbTimer3.Location = new System.Drawing.Point(697, 9);
+            this.lbTimer3.Name = "lbTimer3";
+            this.lbTimer3.Size = new System.Drawing.Size(24, 17);
+            this.lbTimer3.TabIndex = 8;
+            this.lbTimer3.Text = "__";
+            this.lbTimer3.Click += new System.EventHandler(this.lbTimer3_Click);
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 1;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // cbErscheinungsbild
+            // 
+            this.cbErscheinungsbild.FormattingEnabled = true;
+            this.cbErscheinungsbild.Items.AddRange(new object[] {
+            "Light",
+            "Dark"});
+            this.cbErscheinungsbild.Location = new System.Drawing.Point(85, 452);
+            this.cbErscheinungsbild.Name = "cbErscheinungsbild";
+            this.cbErscheinungsbild.Size = new System.Drawing.Size(121, 24);
+            this.cbErscheinungsbild.TabIndex = 9;
+            this.cbErscheinungsbild.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // lbEr
+            // 
+            this.lbEr.AutoSize = true;
+            this.lbEr.Location = new System.Drawing.Point(82, 432);
+            this.lbEr.Name = "lbEr";
+            this.lbEr.Size = new System.Drawing.Size(116, 17);
+            this.lbEr.TabIndex = 10;
+            this.lbEr.Text = "Erscheinungsbild";
             // 
             // Sehtestfenster
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(784, 554);
+            this.Controls.Add(this.lbEr);
+            this.Controls.Add(this.cbErscheinungsbild);
+            this.Controls.Add(this.lbTimer3);
+            this.Controls.Add(this.btZZSt);
+            this.Controls.Add(this.lbDE);
             this.Controls.Add(this.tbeingabe);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lbUebersSeh);
+            this.Controls.Add(this.btErgebnis);
+            this.Controls.Add(this.btZeigeBild);
             this.Controls.Add(this.lbSehtest);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Sehtestfenster";
             this.Text = "Sehtestfenster";
+            this.Load += new System.EventHandler(this.Sehtestfenster_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,12 +188,16 @@
         #endregion
 
         private System.Windows.Forms.Label lbSehtest;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btZeigeBild;
+        private System.Windows.Forms.Button btErgebnis;
+        private System.Windows.Forms.Label lbUebersSeh;
         private System.Windows.Forms.TextBox tbeingabe;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbDE;
         private System.Windows.Forms.ImageList imagelistFarben;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btZZSt;
+        private System.Windows.Forms.Label lbTimer3;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.ComboBox cbErscheinungsbild;
+        private System.Windows.Forms.Label lbEr;
     }
 }

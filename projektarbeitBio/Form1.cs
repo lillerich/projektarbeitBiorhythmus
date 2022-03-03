@@ -101,14 +101,15 @@ namespace projektarbeitBio
             textboxes.Add(tbMonat);
             textboxes.Add(tbJahr);
 
+            
             labels.Add(label1);
             labels.Add(label2);
             labels.Add(label3);
             labels.Add(label4);
-            labels.Add(label5);
-            labels.Add(label6);
+            labels.Add(lbGeburtsdatum);
+            labels.Add(lbT);
             labels.Add(lbTagesdatum);
-            labels.Add(label9);
+            labels.Add(lbTD);
             labels.Add(lbTageSeitGeburt);
             labels.Add(label11);
             labels.Add(label12);
@@ -119,12 +120,12 @@ namespace projektarbeitBio
             labels.Add(lbKoerperlich);
             labels.Add(lbGeistig);
             labels.Add(lbPsychisch);
-            labels.Add(label20);
-            labels.Add(label7);
-            labels.Add(label8);
+            labels.Add(lbU);
+            labels.Add(lbM);
+            labels.Add(lbJ);
             labels.Add(label18);
             labels.Add(lbUhrzeit);        
-            labels.Add(label17);
+            labels.Add(lbUebTDK);
             labels.Add(lbTimer);
             labels.Add(label10);
             labels.Add(label19);

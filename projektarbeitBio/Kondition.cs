@@ -230,7 +230,7 @@ namespace projektarbeitBio
                 prognose_14Tage = prognose_14Tage +
                 " " + t + " \t" +
                 Math.Round(berechneKonditionKoerperlich(t), 0) + " \t\t" +
-                Math.Round(berechneKonditionGeistig(t), 0) + " \t\t" +
+                Math.Round(berechneKonditionGeistig(t), 0) + " \t" +
                 Math.Round(berechneKonditionPsychisch(t), 0) + "\n";
             }
             return prognose_14Tage;
