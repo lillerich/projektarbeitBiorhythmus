@@ -119,14 +119,14 @@ namespace projektarbeitBio
 
 
 
-        //Uhrzeit
+        //Uhrzeit Methode zur Zeitausgabe der Ausführung des Biorythmus. 
         public string ErzeugeUhrzeit()
         {
             return DateTimeOffset.Now.ToString("H:mm tt");
         }
 
 
-        //Timer
+        //Timer der mit Stunden, Minuten und Sekunden läuft.
         public string ErzeugeUhrzeitZwei()
         {
             return DateTimeOffset.Now.ToString("H:mm:ss tt");

@@ -18,25 +18,25 @@ namespace projektarbeitBio
             InitializeComponent();
         }
 
-        //Startseite
-        
+        //Startseitebutton führt zur nächsten Form Sehtest.       
         private void Button1_Click(object sender, EventArgs e)
         {
             Sehtestfenster sehtestfenster = new Sehtestfenster();
             sehtestfenster.Show();
-            //Timer2
+            //Timer2 beginnt zu ticken.
             timer2.Start();
         }
 
+        //Startseitebutton führt zur nächsten Form Form1(Biorythmus).
         private void Button3_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
             form1.Show();
-            //Timer2
+            //Timer2 beginnt zu ticken.
             timer2.Start();
         }
 
-        //END Button
+        //END Button neues Form wird geöffnet zu der Bestätigung.
         private void button1_Click_1(object sender, EventArgs e)
         {
             Beenden beenden = new Beenden();
@@ -49,7 +49,7 @@ namespace projektarbeitBio
           
         }
 
-        //Timer2
+        //Timer2 mit Stunden, Minuten und Sekunden wird aus der Klasse Datum aufgerufen. 
         private void timer2_Tick_1(object sender, EventArgs e)
         {
             Datum d = new Datum();
@@ -59,7 +59,7 @@ namespace projektarbeitBio
 
         
 
-        //Erscheinungsbild
+        //Erscheinungsbild für den Darkmode die Farbänderung der Labels, Textboxen, Buttons... .
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.Text == "Light")
@@ -77,6 +77,7 @@ namespace projektarbeitBio
             }
         }
 
+        //Für alle Textboxen, Labels, buttons... Hintergrundfarbe und Schriftfarbe änderung.
         void ApplyTheme(Color back, Color btn, Color tbox, Color lb, Color comboBox, Color Textcolor)
         {
 
@@ -104,6 +105,7 @@ namespace projektarbeitBio
 
         }
 
+        //Aufzählunf der ganzen Labels, Buttons, Textboxen... deren Farbe für den darkmode geändert wird im Form.
         void Initialize_Add()
         {
             buttons = new List<Control>();
@@ -114,7 +116,9 @@ namespace projektarbeitBio
             buttons.Add(btGoToBio);
             buttons.Add(btGoToSeh);
             buttons.Add(btEND);
-          
+
+            labels.Add(label3);
+            labels.Add(label4);
             labels.Add(label1);
             labels.Add(label2);
             labels.Add(lbUeberschrift);
@@ -129,6 +133,20 @@ namespace projektarbeitBio
         {
             Initialize_Add();
             comboBox1.SelectedIndex = 0;
+        }
+
+        // Startseitebutton öffnet Registieren Form 
+        private void label3_Click(object sender, EventArgs e)
+        {
+            frmRegister frmRegister = new frmRegister();
+            frmRegister.Show();
+        }
+
+        // Startseitebutton öffnet Login Form 
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Login Login  = new Login();
+            Login.Show();
         }
     }
 }

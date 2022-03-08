@@ -26,11 +26,11 @@ namespace projektarbeitBio
             if (indice > 2)
                 indice = 0;
             lbSehtest.ImageIndex = indice;
-            //Timer3
+            //Timer3 wird gesartet wenn man auf "Zeige Bild" drückt.
             timer3.Start();
         }
 
-
+        // Ergebniss des Sehtests, Aussagbe mit Richtig oder Falsch.
         private void Button2_Click(object sender, EventArgs e)
         {
             if (lbSehtest.ImageIndex.Equals(0))
@@ -73,12 +73,13 @@ namespace projektarbeitBio
             }
         }
 
+        // Knopf durch den man zurück zur Startseite kommt.
         private void Button3_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        //Timer3
+        //Timer3 mit Stunden, Minuten und Sekunden wird aus der Klasse Datum aufgerufen.
         private void timer3_Tick(object sender, EventArgs e)
         {
             Datum d = new Datum();
@@ -91,7 +92,7 @@ namespace projektarbeitBio
 
         }
 
-        // Erscheinungsbild
+        // Erscheinungsbild für den Darkmode die Farbänderung der Labels, Textboxen, Buttons... .
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbErscheinungsbild.Text == "Light")
@@ -109,6 +110,7 @@ namespace projektarbeitBio
             }
         }
 
+        //Für alle Textboxen, Labels, buttons... Hintergrundfarbe und Schriftfarbe änderung.
         void ApplyTheme(Color back, Color btn, Color tbox, Color lb, Color comboBox, Color Textcolor)
         {
 
@@ -135,7 +137,8 @@ namespace projektarbeitBio
             }
 
         }
-       
+
+        //Aufzählunf der ganzen Labels, Buttons, Textboxen... deren Farbe für den darkmode geändert wird.
         void Initialize_Add()
         {
             buttons = new List<Control>();

@@ -70,6 +70,8 @@
             this.label21 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // rtbPrognose_14Tage
@@ -516,12 +518,25 @@
             this.label22.Size = new System.Drawing.Size(136, 20);
             this.label22.TabIndex = 41;
             this.label22.Text = "7 Tage Vorschau";
+            
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::projektarbeitBio.Properties.Resources._200w;
+            this.pictureBox1.Location = new System.Drawing.Point(1039, 300);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 42;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1407, 628);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label21);
@@ -566,6 +581,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -614,6 +630,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+
 
 namespace projektarbeitBio
 {
@@ -46,10 +48,10 @@ namespace projektarbeitBio
             rtbPrognose_14Tage.Text = k.erzeugeKonditionPrognose_14Tage();
             k.zeichneKonditionPrognose_60Tage(plPrognose_60Tage.CreateGraphics());
 
-            //Ausgabe Uhrzeit
+            //Ausgabe Uhrzeit im Moment des Knopfdruckes.
             lbUhrzeit.Text = d.ErzeugeUhrzeit();
 
-            //Timer
+            //Timer1 wird gestartet und zählt Stunden, Minuten und Sekunden.
             timer1.Start();
 
             //7 Tage Vorschau
@@ -83,12 +85,7 @@ namespace projektarbeitBio
 
         }
 
-
-
-
-
-        
-        // Erscheinungsbild
+        //Aufzählunf der ganzen Labels, Buttons, Textboxen... deren Farbe für den darkmode geändert wird im Form.
         void Initialize_Add()
         {
             buttons = new List<Control>();
@@ -100,8 +97,7 @@ namespace projektarbeitBio
             textboxes.Add(tbTag);
             textboxes.Add(tbMonat);
             textboxes.Add(tbJahr);
-
-            
+          
             labels.Add(label1);
             labels.Add(label2);
             labels.Add(label3);
@@ -135,7 +131,7 @@ namespace projektarbeitBio
             labels.Add(label22);
         }
 
-
+        //Für alle Textboxen, Labels, buttons... Hintergrundfarbe und Schriftfarbe änderung.
         void ApplyTheme(Color back, Color btn, Color tbox, Color lb, Color comboBox, Color Textcolor)
         {
 
@@ -163,15 +159,13 @@ namespace projektarbeitBio
 
         }
         
-
         private void Form1_Load(object sender, EventArgs e)
         {
             Initialize_Add();
             comboBox1.SelectedIndex = 0;
         }
 
-
-        // ErscheinungsBild Farbe
+        //Erscheinungsbild für den Darkmode die Farbänderung der Labels, Textboxen, Buttons... .
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.Text == "Light")
@@ -189,7 +183,6 @@ namespace projektarbeitBio
             }
         }
 
-
         // Button zur Ausgabe der Berechnung: Prognose 15-29 Tage
 
         private void Button2_Click(object sender, EventArgs e)
@@ -198,5 +191,18 @@ namespace projektarbeitBio
             rtbPrognose_14Tage.Text = k.erzeugeKonditionPrognose_15bis29Tage();
             button2.Visible = false;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // WEnn man auf die Werbund klickt öffnet sich der online Shop.
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            Process.Start("https://www.nespresso.com/de/de/");
+        }
+
+        
     }
 }

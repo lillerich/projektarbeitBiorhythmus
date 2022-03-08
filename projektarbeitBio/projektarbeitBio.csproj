@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnmeldeRegistriere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnmeldeRegistriere.Designer.cs">
+      <DependentUpon>AnmeldeRegistriere.cs</DependentUpon>
+    </Compile>
     <Compile Include="Beenden.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Beenden.Designer.cs">
       <DependentUpon>Beenden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard.Designer.cs">
+      <DependentUpon>dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Datum.cs" />
     <Compile Include="Form1.cs">
@@ -60,6 +72,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Kondition.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sehtestfenster.cs">
@@ -74,11 +92,20 @@
     <Compile Include="Startseite.Designer.cs">
       <DependentUpon>Startseite.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AnmeldeRegistriere.resx">
+      <DependentUpon>AnmeldeRegistriere.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Beenden.resx">
       <DependentUpon>Beenden.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dashboard.resx">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,6 +115,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Sehtestfenster.resx">
       <DependentUpon>Sehtestfenster.cs</DependentUpon>
@@ -107,6 +135,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BothVigorousAlleycat-max-1mb.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BothVigorousAlleycat-max-1mb.gife.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200w.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

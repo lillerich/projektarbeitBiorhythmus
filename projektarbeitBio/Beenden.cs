@@ -17,12 +17,13 @@ namespace projektarbeitBio
             InitializeComponent();
         }
 
-        //Wirklich beenden 
+        //Programm Wirklich beenden mit Ja, beendet das Programm. 
         private void btJa_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //Programm Wirklich beenden mit Nein, zurück zum Startbildschirm.
         private void btNein_Click(object sender, EventArgs e)
         {
             Close();
